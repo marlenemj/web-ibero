@@ -11,6 +11,11 @@ class Task extends Model
 
     // Esto permite asignación masiva
     protected $fillable = [
-    	'name','description', 'status', 'due_date'
+    	'name','description', 'status', 'due_date', 'project_id'
     ];
+
+    public function project()
+    {
+    	return $this->belongsTo(Project::class, 'project_id', 'id');
+    }
 }

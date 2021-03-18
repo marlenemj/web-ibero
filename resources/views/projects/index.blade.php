@@ -89,14 +89,71 @@
 
                 <div class="tareas">
                   <ul>
-                    <li>Tarea 1</li>
-                    <li>Tarea 2</li>
-                    <li>Tarea 3</li>
+                    @foreach($proyecto->tareas as $tarea)
+                    <li>{{ $tarea->name }}</li>
+                    @endforeach
                   </ul>
                 </div>
+
+                <a href="" class="btn btn-light btn-block" data-bs-toggle="modal" data-bs-target="#exampleModal2{{$proyecto->id}}">Agregar Tarea</a>
               </div>
             </div>
             @endforeach
           </div>
         </div>
+
+        @foreach($proyectos as $proyecto)
+        <div class="modal fade" id="exampleModal2{{$proyecto->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Crear Tarea</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <form method="POST" class="pe-4" action="{{ route('tareas.store') }}">
+      <div class="modal-body">
+        
+        <!-- Nuestro campo de protección de formulario -->
+    {{ csrf_field() }}
+
+    <!-- Campos de formulario -->
+    <div class="form-group mb-3">
+      <label>Nombre de tarea</label><br>
+      <input class="form-control" type="text" name="name" placeholder="Nombre de Tarea">
+    </div>
+
+    <div class="form-group mb-3">
+      <label>Descripción</label>
+      <textarea class="form-control" name="description"></textarea>
+    </div>
+
+    <input type="hidden" name="project_id" value="{{ $proyecto->id }}">
+
+    <div class="form-group mb-3">
+                <label>Modalidad</label>
+                <select class="form-control" name="status">
+                    <option value="Individual">Individual</option>
+                    <option value="Parejas">Parejas</option>
+                    <option value="Equipo">Equipo</option>
+                    <option value="Asistencia Externa">Asistencia Externa</option>
+                </select>
+            </div>
+    
+    <div class="form-group mb-3">
+      <label>Fecha de entrega</label>
+      <input class="form-control" type="date" name="due_date">
+    </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </div>
+  </form>
+    </div>
+  </div>
+</div>
+@endforeach
+
         @endsection
