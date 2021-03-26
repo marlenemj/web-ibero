@@ -17,10 +17,30 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', ['App\Http\Controllers\TaskController', 'index']); 
 */
 
-Route::resource('/tareas', 'App\Http\Controllers\TaskController');
-Route::resource('/proyectos', 'App\Http\Controllers\ProjectController');
+Route::get('/', [
+        'uses' => 'App\Http\Controllers\HomeController@mainSite',
+        'as' => 'index'
+    ]);
 
-Route::post('/completar-tarea/{id}',[
-	'uses' => 'App\Http\Controllers\TaskController@changeStatus',
-	'as' => 'completar.tarea'
+Auth::routes();
+
+Route::group(['middleware' => 'auth'], function(){
+
+    Route::resource('/tareas', 'App\Http\Controllers\TaskController'
+);
+    Route::resource('/proyectos', 'App\Http\Controllers\ProjectController');
+
+
+    Route::post('/completar-tarea/{id}', [
+    'uses' => 'App\Http\Controllers\TaskController@changeStatus',
+    'as' => 'completar.tarea'
 ]);
+
+
+    Route::get('/admin', [
+        'uses' => 'App\Http\Controllers\HomeController@index',
+        'as' => 'home'
+    ]);
+});
+
+Route::get('/admin', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

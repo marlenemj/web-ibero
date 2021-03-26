@@ -11,7 +11,7 @@ class Task extends Model
 
     // Esto permite asignación masiva
     protected $fillable = [
-    	'name','description', 'status', 'due_date', 'project_id'
+    	'user_id','name','description', 'status', 'due_date', 'project_id'
     ];
 
     public function project()
