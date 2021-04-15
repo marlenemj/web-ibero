@@ -2,17 +2,17 @@
 
 @section('content')
 
-<div class="container-fluid mb-4">
+<div class="container mb-4">
 	<div class="row align-items-center">
 		<div class="col-md-8">
-	<div class="title-page px-4 py-5">
-		<h3 class="display-1">¡Bienvenido Usuario!</h3>
-		<p class="lead">Esta es una gran aplicación de tareas, utilizala todos los días.</p>
+	<div class="title-page py-5 display-proyectos">
+		<h3 class="display-1">Mis proyectos</h3>
+		<p class="lead">Crea proyectos y agrega tareas a cada uno de ellos.</p>
 	</div>
 </div>
-<div class="col-md-4">
-	<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Crear Nuevo Proyecto
+<div class="col-md-4 boton-crear d-flex justify-content-end">
+	<button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Crear Nuevo Proyecto 
 	</button>
 	</div>
 	</div>
@@ -22,11 +22,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Crear Proyecto</h5>
+        <h5 class="modal-title modal-popup-title" id="exampleModalLabel">Crear Proyecto</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <form method="POST" class="pe-4" action="{{ route('proyectos.store') }}">
+      <form method="POST" class="form-popup" action="{{ route('proyectos.store') }}">
       <div class="modal-body">
         
       	<!-- Nuestro campo de protección de formulario -->
@@ -55,8 +55,8 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-light-si" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-light-si">Guardar</button>
       </div>
   </form>
     </div>
@@ -66,8 +66,8 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-8">
-			<div class="card">
+		<div class="col-md-12">
+			<div class="card card-proyectos">
 				<h5 class="card-header">Listado de Proyectos</h5>
 				<div class="card-body">
 					<h5 class="card-title">Proyectos en curso</h5>
@@ -107,11 +107,11 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Crear Tarea</h5>
+        <h5 class="modal-title modal-popup-title" id="exampleModalLabel">Crear Tarea</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
-      <form method="POST" class="pe-4" action="{{ route('tareas.store') }}">
+      <form method="POST" class="form-popup" action="{{ route('tareas.store') }}">
       <div class="modal-body">
         
         <!-- Nuestro campo de protección de formulario -->
@@ -119,7 +119,7 @@
 
     <!-- Campos de formulario -->
     <div class="form-group mb-3">
-      <label>Nombre de tarea</label><br>
+      <label>Nombre de la tarea</label><br>
       <input class="form-control" type="text" name="name" placeholder="Nombre de Tarea">
     </div>
 
@@ -147,8 +147,8 @@
 
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-light-si" data-bs-dismiss="modal">Cerrar</button>
+        <button type="submit" class="btn btn-light-si">Guardar</button>
       </div>
   </form>
     </div>

@@ -4,18 +4,15 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+            <div class="card card-dashboard">
+                <div class="card-header">{{ __('¡Bienvenido!') }}</div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    <div class="info-dashboard">
+                        <h1>Crea tareas y proyectos desde cada una de sus secciones.</h1>
+                    </div>
 
-                    {{ __('You are logged in!') }}
-                </div>
+                    <div class="foto-dashboard"> <p>Hola</p> </div> 
             </div>
         </div>
     </div>

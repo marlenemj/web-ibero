@@ -1,5 +1,290 @@
-body{
-	background-color: blue;
-	color: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap');
+
+body
+{
+	font-family: 'Roboto', sans-serif;
+}
+
+.personal-header
+{
+	font-family: 'Roboto', sans-serif;
+}
+
+.personal-header .btn-outline-primary
+{
+	border-radius: 55px;
+	border-color: #4a4f54;
+	color: #4a4f54;
+	background-color: #FFFFFF;
+}
+
+.personal-header .btn-outline-primary:hover
+{
+	background-color: #7ac1c7;
+	border-color: #FFFFFF;
+	color: #FFFFFF;
+}
+
+.personal-header .nombre-header
+{
+	color: #4a4f54;
+	font-size:25px;
+}
+
+.personal-header .btn-primary
+{
+	border-radius: 55px;
+	background-color: #7ac1c7;
+	border-color: #7ac1c7;
+	color: #FFFFFF;
+}
+
+.personal-header .btn-primary:hover
+{
+	background-color: #B7DDE1;
+	color: #4a4f54;
+}
+
+.botones-landing .btn-primary
+{
+	border-radius: 15px;
+	background-color: #FFFFFF;
+	border-color: #FFFFFF;
+	color: #4a4f54; 
+}
+.botones-landing .btn-primary:hover
+{
+	background-color: #B7DDE1;
+	border-color: #B7DDE1;
+	color: #FFFFFF; 
+}
+
+.section-home
+{
+	background-image: url("../img/fondocielo.jpg");
+	background-size: 100%;
+}
+
+.card-registro
+{
+	font-family: Roboto, sans-serif;
+	border-color: #FFFFFF;
+	color: #4a4f54;
+}
+
+.card-registro .card-header
+{
+font-size:30px;
+text-align: center;
+background-color: #FFFFFF;
+}
+
+.card-registro .btn-primary
+{
+	background-color: #7ac1c7;
+	border-color: #7ac1c7;
+}
+
+.card-registro .btn-primary:hover
+{
+	background-color: #B7DDE1;
+	border-color: #B7DDE1;
+	color: #4a4f54;
+}
+
+.card-dashboard
+{
+	font-family: Roboto, sans-serif;
+	border-color: #FFFFFF;
+	color: #4a4f54;
+}
+
+.card-dashboard .card-header
+{
+font-size:30px;
+text-align: center;
+background-color: #FFFFFF;
+}
+
+.card-dashboard .infoheader, h1
+{
+	font-size:20px;
+	text-align: center;
+	color: #A8A9AB;
+	padding-bottom: 30px;
+}
+
+div.foto-dashboard
+{
+	background-image:url("../img/compu2.jpg");
+	background-size: 100%;
+	display: block;
+	width: 100%;
+	height: 100%; 
+	border-radius: 20px;
+}
+
+.foto-dashboard p
+{
+	padding: 230px;
+	color:rgba(0,0,0,0);
+}
+
+.display-proyectos h3
+{
+	font-family: Roboto, sans-serif;
+	font-size: 35px;
+}
+
+.display-proyectos p
+{
+	font-family: Roboto, sans-serif;
+	color: #A8A9AB;
+}
+
+.boton-crear .btn-outline-primary
+{
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	border-color: #7ac1c7;
+	color: #7ac1c7;
+}
+
+.boton-crear .btn-outline-primary:hover
+{
+	border-color: #B7DDE1;
+	color: #B7DDE1;
+}
+
+.card-proyectos
+{
+	font-family: Roboto, sans-serif;
+	border-color: #FFFFFF;
+	color: #4a4f54;
+}
+
+.card-proyectos .card-header
+{
+font-size:22px;
+background-color: #FFFFFF;
+color: #7ac1c7;
+}
+
+.card-tareas
+{
+	font-family: Roboto, sans-serif;
+	color: #4a4f54;
+}
+
+.card-tareas .card-header
+{
+font-size:22px;
+background-color: #FFFFFF;
+color: #7ac1c7;
+}
+
+.card-tareas th, td
+{
+	font-family: Roboto, sans-serif;
+	color: #4a4f54;
+	text-align: center;
+}
+
+.card-tareas .bg-secondary
+{
+	background-color: #7ac1c7!important;
+	color:#FFFFFF;
+}
+
+.bg-success
+{
+	background-color: #c3db79!important;
+	color:#FFFFFF;
+}
+
+.bg-warning
+{
+	background-color: #EECA6C!important;
+	color:#FFFFFF;
+}
+
+.btn-light-si
+{
+	backgroung-color:#FFFFFF;
+	border-color: #4a4f54;
+	border-radius: 10px;
+	color:#4a4f54;
+}
+
+.btn-light-si:hover
+{
+	backgroung-color:#A8A9AB;
+	border-color: #A8A9AB;
+	color:#A8A9AB;
+}
+
+.card-tareas .ver-detalle
+{
+	color:#4a4f54;
+}
+
+.card-tareas .ver-detalle:hover
+{
+	color:#A8A9AB;
+}
+
+.btn-dark
+{
+	background-color: #ff5f5f;
+	border-color: #ff5f5f;
+	border-radius: 10px;
+	color:#FFFFFF;
+}
+
+.btn-dark:hover
+{
+	background-color: #E35555;
+	border-color: #E35555;
+}
+
+.card-textos .card-title
+{
+	font-family: Roboto, sans-serif;
+	color: #4a4f54;
+	font-size: 19px;
+}
+
+.card-textos .card-text
+{
+	font-family: Roboto, sans-serif;
+	color: #4a4f54;
+	font-size: 15px;
+}
+
+.vista-editar label
+{
+	color: #A8A9AB;
+}
+
+.vista-editar textarea
+{
+	color: #4a4f54;
+}
+
+.modal-popup-title
+{
+	font-family: Roboto, sans-serif;
+	color: #7ac1c7;
+	font-size: 23px;
+}
+
+.form-popup label
+{
+	color: #A8A9AB;
+}
+
+.vista-editar textarea
+{
+	color: #4a4f54;
 }
 

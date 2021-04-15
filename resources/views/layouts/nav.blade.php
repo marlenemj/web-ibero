@@ -1,7 +1,7 @@
 <div class="container">
-  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
-    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      App Tareas
+  <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom personal-header">
+    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-decoration-none nombre-header">
+      APP TAREAS
     </a>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -17,11 +17,11 @@
     <div class="col-md-3 text-end">
       @guest
         <a href="{{ route('login') }}" class="btn btn-outline-primary me-2"><ion-icon name="log-in-outline"></ion-icon> Iniciar Sesión</a>
-        <a href="{{ route('register') }}" class="btn btn-primary"><ion-icon name="add-circle-outline"></ion-icon> Registro</a>
+        <a href="{{ route('register') }}" class="btn btn-outline-primary"><ion-icon name="add-circle-outline"></ion-icon> Registro</a>
       @else
       <div class="dropdown">
-        <button class="btn btn-link" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-          Bienvenido, {{ Auth::user()->name }}
+        <button class="btn btn-primary" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          <ion-icon name="person-circle-outline"></ion-icon> {{ Auth::user()->name }}
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li>
